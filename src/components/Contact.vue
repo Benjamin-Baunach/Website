@@ -321,4 +321,52 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+@media only screen and (max-width: 600px) {
+  .canvas-container {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+  }
+
+  .animation-canvas {
+    width: 100%;
+    height: auto;
+  }
+  .items-container {
+    margin-top: 5em;
+    margin-bottom: 3em;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+  .contact-content {
+    width: 210px;
+    height: 200px;
+   
+  }
+  
+  .contact-content p {
+    font-size: 16px;
+  }
+  
+  .contact-form {
+    height: auto;
+    width: 80%;
+    padding: 2em;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+}
+
 </style>

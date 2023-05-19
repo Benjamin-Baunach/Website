@@ -1,22 +1,61 @@
 <template>
-  <div class="overhead">
+  <div v-if="isMobile" class="mobile-content">
+    <div class="mobile-navbarContainer">
+      <nav class="navbarLogoMobile">
+        <router-link to="/Website" class="navbarLogoTextMobile"> BENJAMIN BAUNACH</router-link>
+        <button @click="openMenu" class="hamburger">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <div v-if="this.isMenuOpen" class="mobile-navbarLiElemente">
+          <div class="navBarMobile">
+            <li class="navbarElementsMobile" :class="{ active: $route.path === '/Website' }">
+              <router-link to="/Website">HOME</router-link>
+            </li>
+            <li class="navbarElementsMobile" :class="{ active: $route.path === '/about' }">
+              <router-link to="/about">ABOUT</router-link>
+            </li>
+            <li class="navbarElementsMobile" :class="{ active: $route.path === '/projects' }">
+              <router-link to="/projects">PROJECTS</router-link>
+            </li>
+            <li class="navbarElementsMobile" :class="{ active: $route.path === '/contact' }">
+              <router-link to="/contact">CONTACT</router-link>
+            </li>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+  </div>
+
+
+
+  <div v-else class="overhead">
     <div class="navbarContainer">
       <nav class="navbarLogo">
         <router-link to="/Website" class="navbarLogoText"> BENJAMIN BAUNACH</router-link>
         <p class="BallClick"> Click the ball</p>
         <div class="navbarLiElemente">
           <canvas ref="canvas" id="cnv"></canvas>
-          <li class="navbarElements" :class="{ active: $route.path === '/Website' }"><router-link to="/Website">HOME</router-link></li>
-          <li class="navbarElements" :class="{ active: $route.path === '/about' }"><router-link to="/about">ABOUT</router-link></li>
-          <li class="navbarElements" :class="{ active: $route.path === '/projects' }"><router-link to="/projects">PROJECTS</router-link></li>
-          <li class="navbarElements" :class="{ active: $route.path === '/contact' }"> <router-link to="/contact">CONTACT</router-link></li>
+          <li class="navbarElements" :class="{ active: $route.path === '/Website' }"><router-link
+              to="/Website">HOME</router-link></li>
+          <li class="navbarElements" :class="{ active: $route.path === '/about' }"><router-link
+              to="/about">ABOUT</router-link></li>
+          <li class="navbarElements" :class="{ active: $route.path === '/projects' }"><router-link
+              to="/projects">PROJECTS</router-link></li>
+          <li class="navbarElements" :class="{ active: $route.path === '/contact' }"> <router-link
+              to="/contact">CONTACT</router-link></li>
         </div>
       </nav>
     </div>
 
-    <div class="container">
-      <router-view />
-    </div>
+
+
+
+  </div>
+  <div class="container">
+    <router-view />
   </div>
 </template>
 
@@ -24,10 +63,54 @@
 export default {
   name: 'App',
 
+  data() {
+    return {
+      isMobile: false,
+      isMenuOpen: false,
+    };
+  },
+
   mounted() {
     this.animateCanvas();
+
+    // Add a listener to update isMobile when window size changes
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      this.isMobile = true;
+    } else {
+      this.isMobile = false;
+    }
+
+    window.addEventListener('resize', () => {
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
+    });
+
   },
+  beforeUnmount() {
+    // Remove the listener when the component is unmounted
+    window.removeEventListener('resize', this.updateIsMobile);
+  },
+
+
   methods: {
+    //Mobile Version
+    updateIsMobile() {
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
+    },
+    openMenu() {
+    
+      this.isMenuOpen = !this.isMenuOpen;
+      console.log(this.isMenuOpen);
+    },
+
+    //Canvas
     animateCanvas() {
       const canvas = document.getElementById("cnv");
       const ctx = canvas.getContext("2d");
@@ -119,11 +202,11 @@ export default {
 
 </script>
 <style>
-
 body {
   margin: 0;
   padding: 0;
 }
+
 @font-face {
   font-family: 'Almarai_extra';
   src: url('@/assets/fonts/Almarai-ExtraBold.ttf') format('truetype');
@@ -138,12 +221,13 @@ body {
   font-style: normal;
 }
 
-.overhead{
+.overhead {
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
 }
+
 .navbarContainer {
   height: 7em;
   background-color: #A1D6E2;
@@ -155,7 +239,8 @@ body {
   left: 0;
   right: 0;
   padding: 0 20px;
-  z-index: 10; /* Höherer z-index-Wert für die Navbar */
+  z-index: 10;
+  /* Höherer z-index-Wert für die Navbar */
 }
 
 .navbarLogo {
@@ -203,9 +288,11 @@ body {
   margin-left: 5em;
   margin-right: 5em;
 }
+
 .container {
   margin-top: 7em;
 }
+
 .navbarLiElemente li.active a {
   background-color: #1995AD;
 }
@@ -216,5 +303,96 @@ body {
   font-weight: bold;
   color: #1995AD;
   margin-left: 10em;
+}
+
+/*MOBILE VERSION */
+.mobile-navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5em;
+  width: auto;
+  background-color: #A1D6E2;
+  text-align: center;
+}
+
+.navbarLogoMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.navbarLogoTextMobile {
+  color: black;
+  font-family: 'Almarai_extra';
+  text-decoration: none;
+  font-size: 23px;
+}
+
+.hamburger {
+  position: absolute;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger-line {
+  width: 2rem;
+  height: 0.25rem;
+  background-color: black;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.mobile-navbarLiElemente {
+  position: absolute;
+  top: 5em;
+  width: 100%;
+  height: 80%;
+  background-color: rgba(161, 214, 226, 0.7); /* Ändert den RGB-Wert und den Transparenzwert (0.9 für 90% undurchsichtig) */
+  z-index: 1000;
+}
+
+.mobile-navbarLiElemente.open {
+  height: 100%;
+}
+
+.mobile-navbarLiElemente li {
+  margin-top: 3em; /* Ändert den Abstand zwischen den Listenelementen */
+  list-style: none;
+  border-bottom: none; /* Entfernt die unterstrichenen Linien */
+}
+
+.mobile-navbarLiElemente li a {
+  padding: 10px;
+  text-decoration: none;
+  color: black; 
+  font-size: 18px;
+  font-family: 'Almarai_extra', sans-serif;
+}
+
+.mobile-navbarLiElemente.open li {
+  opacity: 1;
+}
+
+.navbarElementsMobile.router-link-active {
+  color: #FFA500; 
+  font-weight: bold; 
+}
+
+.navbarElementsMobile:hover {
+  color: #ccc;
+ 
 }
 </style>

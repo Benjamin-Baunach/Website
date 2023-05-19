@@ -5,14 +5,14 @@
       <div class="foregroubd-container">
         <div class="item-container">
           <h3 class="home-h3">Hey</h3>
-          <h1 class="home-h1">My name is Benjamin Baunach</h1>
-          <h2 class="home-h2">Student for Software and Media Sience</h2>
+          <h1 class="home-h1">Mein Name ist Benjamin Baunach</h1>
+          <h2 class="home-h2">Student für Software und Medieninformatik</h2>
         </div>
-        <img src="../assets/Profile.png" alt="">
+        <img class="profile-image" src="../assets/Profile.png" alt="">
       </div>
-      <router-link to="/contact" class="middle"><button class="glowing-btn glowing-btn-small-width"> 
-    <span class="glowing-txt">GET <span class="faulty-letter">CONNECTED</span></span>
-  </button></router-link>
+      <router-link to="/contact" class="middle"><button class="glowing-btn glowing-btn-small-width">
+          <span class="glowing-txt">GET <span class="faulty-letter">CONNECTED</span></span>
+        </button></router-link>
     </div>
   </div>
 </template>
@@ -145,38 +145,38 @@ export default {
 /*******
 Webpage Content
 ********/
-.foreground-elements{
+.foreground-elements {
   display: flex;
   flex-direction: column;
 
 }
 
-.foregroubd-container{
-  margin-top: 5em; 
+.foregroubd-container {
+  margin-top: 5em;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 20em;
 }
 
-.item-container{
-  margin-top: 5em; 
+.item-container {
+  margin-top: 5em;
 }
 
-.home-h1{
+.home-h1 {
   color: white;
   font-family: 'Almarai_extra', sans-serif;
   font-size: 50px;
-  
+
 }
 
-.home-h2{
+.home-h2 {
   color: #1995AD;
   font-family: 'Almarai_extra', sans-serif;
   font-size: 40px;
 }
 
-.home-h3{
+.home-h3 {
   color: white;
   font-family: 'Almarai_normal', sans-serif;
   font-size: 30px;
@@ -187,7 +187,7 @@ Webpage Content
 ********/
 
 .glowing-btn {
-  margin-top: 3em; 
+  margin-top: 3em;
   position: relative;
   color: var(--glow-color);
   cursor: pointer;
@@ -224,13 +224,17 @@ Webpage Content
 
 .glowing-btn-large {
 
-  padding: 0.5em 1.5em; /* Passe den Padding-Wert an, um die Größe des Buttons zu ändern */
-  font-size: 1.5em; /* Passe die Schriftgröße an, um die Größe des Button-Textes zu ändern */
-  border-radius: 0.6em; /* Passe den border-radius-Wert an, um die abgerundeten Ecken des Buttons zu ändern */
+  padding: 0.5em 1.5em;
+  /* Passe den Padding-Wert an, um die Größe des Buttons zu ändern */
+  font-size: 1.5em;
+  /* Passe die Schriftgröße an, um die Größe des Button-Textes zu ändern */
+  border-radius: 0.6em;
+  /* Passe den border-radius-Wert an, um die abgerundeten Ecken des Buttons zu ändern */
 }
 
 .glowing-btn-small-width {
-  width: 780px; /* Passe den Width-Wert an, um die Gesamtgröße des Buttons zu ändern */
+  width: 780px;
+  /* Passe den Width-Wert an, um die Gesamtgröße des Buttons zu ändern */
 }
 
 .faulty-letter {
@@ -295,24 +299,31 @@ Webpage Content
   0% {
     opacity: 0.1;
   }
+
   2% {
     opacity: 0.1;
   }
+
   4% {
     opacity: 0.5;
   }
+
   19% {
     opacity: 0.5;
   }
+
   21% {
     opacity: 0.1;
   }
+
   23% {
     opacity: 1;
   }
+
   80% {
     opacity: 0.5;
   }
+
   83% {
     opacity: 0.4;
   }
@@ -342,12 +353,15 @@ Webpage Content
   12% {
     opacity: 0.1;
   }
+
   20% {
     opacity: 1;
   }
+
   25% {
     opacity: 0.3;
   }
+
   30% {
     opacity: 1;
   }
@@ -355,6 +369,7 @@ Webpage Content
   70% {
     opacity: 0.7;
   }
+
   72% {
     opacity: 0.2;
   }
@@ -362,6 +377,7 @@ Webpage Content
   77% {
     opacity: 0.9;
   }
+
   100% {
     opacity: 0.9;
   }
@@ -371,9 +387,11 @@ Webpage Content
   0% {
     opacity: 0.1;
   }
+
   2% {
     opacity: 1;
   }
+
   4% {
     opacity: 0.1;
   }
@@ -381,24 +399,78 @@ Webpage Content
   8% {
     opacity: 1;
   }
+
   70% {
     opacity: 0.7;
   }
+
   100% {
     opacity: 1;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .glowing-btn{
-    font-size: 1em;
+  .canvas-container {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+  }
+
+  .animation-canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  .glowing-btn {
+    font-size: .8em;
+  }
+
+  .middle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .foregroubd-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .item-container {
+    margin-top: 1em;
+    margin-left: 2em;
+  }
+
+  .home-h1 {
+    font-size: 30px;
+  }
+
+  .home-h2 {
+    font-size: 24px;
+  }
+
+  .home-h3 {
+    font-size: 20px;
+  }
+
+  .glowing-btn-small-width {
+    width: 100%;
+  }
+
+  .faulty-letter {
+    opacity: 1;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
   }
 }
-
-.middle{
-  margin-left: auto;
-  margin-right: auto;
-}
-
 
 </style>
