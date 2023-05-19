@@ -325,7 +325,7 @@ p {
   color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1240px) {
 
 
   .page-wrapper {

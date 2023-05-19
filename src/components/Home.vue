@@ -10,9 +10,11 @@
         </div>
         <img class="profile-image" src="../assets/Profile.png" alt="">
       </div>
-      <router-link to="/contact" class="middle"><button class="glowing-btn glowing-btn-small-width">
-          <span class="glowing-txt">GET <span class="faulty-letter">CONNECTED</span></span>
-        </button></router-link>
+      <div class="button-container">
+        <router-link to="/contact" class="middle"><button class="glowing-btn glowing-btn-small-width">
+            <span class="glowing-txt">GET <span class="faulty-letter">CONNECTED</span></span>
+          </button></router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -185,6 +187,12 @@ Webpage Content
 /*******.
  Button Animation
 ********/
+
+.button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .glowing-btn {
   margin-top: 3em;
@@ -409,7 +417,7 @@ Webpage Content
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1240px) {
   .canvas-container {
     height: 100%;
     position: fixed;
@@ -472,5 +480,4 @@ Webpage Content
     height: 200px;
   }
 }
-
 </style>

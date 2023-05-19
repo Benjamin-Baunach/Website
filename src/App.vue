@@ -8,25 +8,24 @@
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
         </button>
-        <div v-if="this.isMenuOpen" class="mobile-navbarLiElemente">
+        <div v-if="isMenuOpen" class="mobile-navbarLiElemente">
           <div class="navBarMobile">
             <li class="navbarElementsMobile" :class="{ active: $route.path === '/Website' }">
-              <router-link to="/Website">HOME</router-link>
+              <router-link @click="closeMenu" to="/Website">HOME</router-link>
             </li>
             <li class="navbarElementsMobile" :class="{ active: $route.path === '/about' }">
-              <router-link to="/about">ABOUT</router-link>
+              <router-link @click="closeMenu" to="/about">ABOUT</router-link>
             </li>
             <li class="navbarElementsMobile" :class="{ active: $route.path === '/projects' }">
-              <router-link to="/projects">PROJECTS</router-link>
+              <router-link @click="closeMenu" to="/projects">PROJECTS</router-link>
             </li>
             <li class="navbarElementsMobile" :class="{ active: $route.path === '/contact' }">
-              <router-link to="/contact">CONTACT</router-link>
+              <router-link @click="closeMenu" to="/contact">CONTACT</router-link>
             </li>
           </div>
         </div>
       </nav>
     </div>
-    
   </div>
 
 
@@ -74,14 +73,14 @@ export default {
     this.animateCanvas();
 
     // Add a listener to update isMobile when window size changes
-    if (window.matchMedia("(max-width: 768px)").matches) {
+    if (window.matchMedia("(max-width: 1240px)").matches) {
       this.isMobile = true;
     } else {
       this.isMobile = false;
     }
 
     window.addEventListener('resize', () => {
-      if (window.matchMedia("(max-width: 768px)").matches) {
+      if (window.matchMedia("(max-width: 1240px)").matches) {
         this.isMobile = true;
       } else {
         this.isMobile = false;
@@ -96,7 +95,11 @@ export default {
 
 
   methods: {
+
     //Mobile Version
+    closeMenu() {
+      this.isMenuOpen = false;
+    },
     updateIsMobile() {
       if (window.matchMedia("(max-width: 768px)").matches) {
         this.isMobile = true;
@@ -105,9 +108,7 @@ export default {
       }
     },
     openMenu() {
-    
       this.isMenuOpen = !this.isMenuOpen;
-      console.log(this.isMenuOpen);
     },
 
     //Canvas
@@ -115,8 +116,6 @@ export default {
       const canvas = document.getElementById("cnv");
       const ctx = canvas.getContext("2d");
 
-      console.log(canvas.width);
-      console.log(canvas.height);
 
       let x = 0;
       let y = canvas.height / 2;
@@ -285,8 +284,8 @@ body {
 }
 
 #cnv {
-  margin-left: 5em;
-  margin-right: 5em;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .container {
@@ -302,7 +301,7 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: #1995AD;
-  margin-left: 10em;
+  margin-left: 5em;
 }
 
 /*MOBILE VERSION */
@@ -360,7 +359,8 @@ body {
   top: 5em;
   width: 100%;
   height: 80%;
-  background-color: rgba(161, 214, 226, 0.7); /* Ändert den RGB-Wert und den Transparenzwert (0.9 für 90% undurchsichtig) */
+  background-color: rgba(161, 214, 226, 0.9);
+  /* Ändert den RGB-Wert und den Transparenzwert (0.9 für 90% undurchsichtig) */
   z-index: 1000;
 }
 
@@ -369,15 +369,17 @@ body {
 }
 
 .mobile-navbarLiElemente li {
-  margin-top: 3em; /* Ändert den Abstand zwischen den Listenelementen */
+  margin-top: 3em;
+  /* Ändert den Abstand zwischen den Listenelementen */
   list-style: none;
-  border-bottom: none; /* Entfernt die unterstrichenen Linien */
+  border-bottom: none;
+  /* Entfernt die unterstrichenen Linien */
 }
 
 .mobile-navbarLiElemente li a {
   padding: 10px;
   text-decoration: none;
-  color: black; 
+  color: black;
   font-size: 18px;
   font-family: 'Almarai_extra', sans-serif;
 }
@@ -387,12 +389,11 @@ body {
 }
 
 .navbarElementsMobile.router-link-active {
-  color: #FFA500; 
-  font-weight: bold; 
+  color: #FFA500;
+  font-weight: bold;
 }
 
 .navbarElementsMobile:hover {
   color: #ccc;
- 
-}
-</style>
+
+}</style>
