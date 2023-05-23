@@ -92,11 +92,11 @@ export default {
       projects: [
         {
           title: 'Smarte Kasse',
-          description: `Willkommen zu einem meiner spannendsten Projekte - einem digitalen Kaffeemanagementsystem, entwickelt für die "pep.digital GmbH" und "Steinbeis".\n 
-                Dieses System revolutioniert die Art und Weise wie Unternehmen ihren Kaffeeverbrauch verwalten, indem es innovative Technologien mit Benutzerfreundlichkeit verbindet. Unser Team nutzte React, eine leistungsstarke Bibliothek zur Erstellung webbasierter Benutzeroberflächen, und entwickelte eine robuste API mit Node und Express. Zur Verwaltung unserer Daten haben wir MySQL, ein bewährtes Open-Source-SQL-Datenbankmanagementsystem, verwendet.\n
-                Für maximale Zuverlässigkeit und einfache Bereitstellung haben wir unsere Anwendung in Docker-Containern isoliert. Einzigartig an diesem Projekt ist die Verwendung der RFID-Technologie und eines Raspberry Pi-Terminals. Durch die Integration eines Touchscreens und eines RFID-Scanners haben wir eine intuitive und benutzerfreundliche Schnittstelle geschaffen, die den Kaffeebezug für die Mitarbeiter einfacher und spaßiger macht als je zuvor.\n
-                Das Projektmanagement war ein zentraler Aspekt bei der Realisierung dieses Projekts. Mit Hilfe von GitLab und agilen Methoden konnten wir effizient zusammenarbeiten, Herausforderungen meistern und das Projekt erfolgreich zum Abschluss bringen.\n
-                Dieses digitale Kaffeemanagementsystem repräsentiert meine Leidenschaft für kreative Problemlösungen und die Anwendung modernster Technologien. Entdecken Sie die Details und lassen Sie sich von der Technik hinter dem Spaß am Kaffee begeistern.`,
+          description: `Diese Projektarbeit stellt das von unserem Team entwickelte digitale Kaffeemanagementsystem vor. Unser Ziel war es, eine benutzerfreundliche Website zu erstellen und die RFID-Technologie in Kombination mit einem Raspberry Pi Terminal zu nutzen, um eine effiziente Verwaltung des Kaffeekonsums bei "pep.digital GmbH" und Steinbeis zu ermöglichen . \n
+          Wir haben verschiedene Technologien eingesetzt, um ein robustes und zuverlässiges System zu gewährleisten. Die Entwicklung der Benutzeroberfläche wurde mit React realisiert, einer leistungsstarken Bibliothek für die Erstellung webbasierter Anwendungen. Die API wurde in JavaScript mit Node und Express entwickelt, um eine nahtlose Kommunikation zwischen dem Frontend und der Datenbank zu ermöglichen. Als Datenbankmanagementsystem wurde MySQL, eine bewährte Open-Source-Lösung für SQL-Datenbanken, verwendet. Die Anwendung wurde zur einfachen Bereitstellung und Skalierbarkeit in Docker-Containern isoliert. \n
+          Ein Schlüsselelement unseres Systems ist die Integration eines Raspberry Pi-Terminals mit einem Touchscreen und einem RFID-Scanner. Dadurch können die Mitarbeiter auf intuitive und benutzerfreundliche Weise mit dem System interagieren, indem sie einfach ihre RFID-Karte scannen, um Kaffee zu erhalten oder Informationen abzurufen \n
+          Das Projektmanagement spielte eine entscheidende Rolle bei der erfolgreichen Umsetzung des Projekts. Wir nutzten GitLab als zentrales Tool für die Versionskontrolle und die Zusammenarbeit. Durch die Anwendung agiler Methoden waren wir in der Lage, effizient zu arbeiten, Herausforderungen zu bewältigen und das Projekt erfolgreich abzuschließen.\
+          `,
           images: [landingPage, raspberry, endProduct],
           gitlab: true,
           link: "https://gitlab.com/benjaminbaunach16/smartekasse.git"
@@ -144,38 +144,31 @@ export default {
         {
           title: "Photoshop und Illustrator",
           images: [fantasy, dinerTime, squid],
-          description: `Meine Projekte mit Photoshop und Illustrator entstanden im Rahmen meiner Studienarbeit. Der Schwerpunkt lag auf der Verwendung von Photoshop und Illustrator, um kreative visuelle Arbeiten zu erstellen.
+          description: `Diese kreativen Projekte mit Photoshop und Illustrator waren Teil eines meiner Hochschulprojekte. Im Rahmen meiner Studienarbeit hatte ich die Möglichkeit, mich intensiv mit den Möglichkeiten dieser Software auseinanderzusetzen und meine gestalterischen Fähigkeiten weiterzuentwickeln.\n
+          In Photoshop setzte ich verschiedene Techniken ein, darunter Überlagerungen, Pinselwerkzeuge, Freisteller und Schatten, um beeindruckende visuelle Kompositionen zu erstellen. Mit diesen Werkzeugen konnte ich Bilder auf kreative und ansprechende Weise manipulieren. \n
+          Ich habe experimentiert, um interessante Effekte zu erzielen und meine Bilder zum Leben zu erwecken. Durch den gezielten Einsatz dieser Techniken konnte ich meine kreative Idee umsetzen und ein visuell ansprechendes Werk schaffen. \n
+          In Illustrator konzentrierte ich mich auf die Gestaltung mit Schriften, insbesondere auf die Auswahl und Anpassung bestimmter Schriftarten, um typografische Elemente zu betonen. So konnte ich visuell ansprechende Designs und Layouts erstellen. \n
+          Dieses Hochschulprojekt gab mir die Möglichkeit, mein gestalterisches Potenzial voll zu entfalten und praktische Erfahrungen im Umgang mit professionellen Grafikdesign-Tools zu sammeln. Die Bearbeitung von Bildern, das Erzielen künstlerischer Effekte und der gezielte Einsatz von Schriften sind wertvolle Fähigkeiten, die ich während meiner Arbeit an der Universität weiter ausbauen konnte.
 
-                        In Photoshop habe ich verschiedene Techniken wie Überlagerungen, Pinselwerkzeuge, Freisteller und Schatten verwendet.  Die kreativen Funktionen von Photoshop ermöglichten es mir, meine künstlerische Vision zum Leben zu erwecken und faszinierende visuelle Kompositionen zu schaffen.
-
-                        In Illustrator habe ich mich auf die Gestaltung mit Schriftarten konzentriert. Ich wählte gezielt bestimmte Schriftarten aus und passte sie an, um typografische Elemente zu gestalten und zu betonen. Auf diese Weise konnte ich visuell ansprechende Designs und Layouts erstellen, die Aufmerksamkeit erregen und klare Botschaften vermitteln.
-
-                        Durch diese Projekte mit Photoshop und Illustrator konnte ich mein kreatives Potenzial voll ausschöpfen und praktische Erfahrungen im Umgang mit professionellen Grafikdesign-Tools sammeln. Die Bearbeitung von Bildern, das Erzielen künstlerischer Effekte und der gezielte Einsatz von Schriftarten sind wertvolle Fähigkeiten, die ich während meiner Arbeit am College entwickeln konnte.
-
-                        Diese Projekte zeigen meine Fähigkeiten im Umgang mit den leistungsstarken Werkzeugen von Photoshop und Illustrator und geben einen Einblick in meinen Designansatz. Ich bin stolz darauf, diese Arbeiten zu präsentieren und freue mich darauf, mein Wissen und meine Fähigkeiten in Zukunft zu erweitern und neue überzeugende Projekte zu gestalten.`,
+          `,
 
         },
         {
           title: "Blender",
           images: [kopfhörer, birnen, affen, bildschirme, würfel,],
-          description: `Willkommen zu meinen Blender-Projekten! Ich freue mich, meine ersten Projekte mit dir zu teilen, die mir geholfen haben, die Grundlagen der 3D-Modellierung und Animation in Blender zu erlernen.
-
-                      Diese Projekte waren eine spannende Reise, bei der ich mich intensiv mit den verschiedenen Funktionen und Werkzeugen von Blender vertraut gemacht habe. Sie dienten als Grundlage, um mein Verständnis für die Erstellung von Modellen, Texturen und Animationen zu erweitern.
-
-                      Jedes Projekt repräsentiert eine Herausforderung, bei der ich meine Fähigkeiten verbessern konnte. Es war eine großartige Gelegenheit, meine kreative Vision zum Leben zu erwecken und mich mit den Grundlagen der 3D-Kunst vertraut zu machen.
-
-                      Ich hoffe, dass dir meine ersten Blender-Projekte einen Einblick in meine Reise und meinen Fortschritt geben. Ich bin stolz darauf, diese Arbeiten zu präsentieren und freue mich darauf, in Zukunft noch weiter zu wachsen und neue faszinierende Projekte zu schaffen.`,
+          description: `Willkommen bei meinen Blender-Projekten! Im Folgenden möchte ich meine ersten Projekte vorstellen, mit denen ich die Grundlagen der 3D-Modellierung und Animation in Blender erlernt habe. \n
+          Diese Projekte haben es mir ermöglicht, mich intensiv mit den verschiedenen Funktionen und Werkzeugen von Blender vertraut zu machen und meine Fähigkeiten in der 3D-Modellierung und Animation zu entwickeln. \n
+          Jedes Projekt stellte mich vor eine Herausforderung, bei der ich meine Fähigkeiten verbessern konnte. Es war eine spannende Möglichkeit, meine kreative Vision zu verwirklichen und die Grundlagen der 3D-Kunst in Blender kennenzulernen \n
+          Es ist schön, einen Einblick in meine ersten Blender-Projekte geben zu können und die Fortschritte zu präsentieren. Die Erfahrung hat dazu beigetragen, meine Motivation für die weitere Entwicklung zu stärken und in Zukunft neue spannende Projekte in Angriff zu nehmen.\n
+      .`,
         },
         {
           title: "3ds Max",
           images: [axt, bottle],
-          description: `Das Projekt "3ds Max" war Teil eines Hochschulmoduls, das sich mit den Grundlagen der 3D-Modellierung und -Animation mit 3ds Max befasste. Im Rahmen dieses Projekts wurden verschiedene Techniken und Funktionen von 3ds Max erkundet und angewendet. 
-
-                        Ein Beispielprojekt innerhalb dieses Moduls war die Erstellung einer Axt. Dabei wurden verschiedene Aspekte der Modellierungstechniken verwendet, wie zum Beispiel das Skalieren von Vertices, das Formen von Polygonen und das Erstellen von Details. Durch die Anwendung dieser Techniken konnten wir eine realistische Darstellung einer Axt erzeugen.
-                        
-                        Während des Projekts wurden auch andere Funktionen von 3ds Max erkundet, wie das Anwenden von Texturen und Materialien, die Einstellung von Beleuchtung und Schatten sowie die Animation von Objekten. Diese Grundlagen ermöglichten uns einen umfassenden Einblick in die 3D-Modellierung mit 3ds Max.
-                      
-                        Das Projekt "3ds Max" bot uns die Möglichkeit, unsere Kenntnisse und Fähigkeiten in der 3D-Modellierung zu erweitern und praktische Erfahrungen mit einer professionellen Software wie 3ds Max zu sammeln. Es war ein spannendes Projekt, das uns half, ein solides Fundament für weitere 3D-Projekte aufzubauen und unser Verständnis für die 3D-Welt zu vertiefen.`,
+          description: `Das Projekt "3ds Max" war Teil eines Hochschulmoduls, das sich mit den Grundlagen der 3D-Modellierung und -Animation mit 3ds Max befasste. Im Rahmen dieses Projekts haben wir verschiedene Techniken und Funktionen von 3ds Max erforscht und angewendet. \n
+          Ein Beispielprojekt innerhalb dieses Moduls war die Erstellung einer Axt. Wir konzentrierten uns auf Modellierungstechniken wie das Skalieren von Eckpunkten, das Formen von Polygonen und das Hinzufügen von Details. Durch die Anwendung dieser Techniken gelang es uns, eine realistische Darstellung einer Axt zu erstellen. Während des Projekts haben wir auch andere Funktionen von 3ds Max erkundet, wie z. B. die Anwendung von Texturen und Materialien. \n
+          Das "3ds Max"-Projekt gab uns die Möglichkeit, unsere Kenntnisse und Fähigkeiten im Bereich der 3D-Modellierung zu erweitern und praktische Erfahrungen mit einer professionellen Software wie 3ds Max zu sammeln. Es war eine spannende Aufgabe, die uns half, eine solide Grundlage für weitere 3D-Projekte zu schaffen und unser Verständnis für die 3D-Welt zu vertiefen.
+          `,
         },
       ],
     };
